@@ -94,16 +94,15 @@ jobs:
         path: openwrt/bin
 
     - name: 整理文件
-      id: organize
-      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
+      if: always()
       run: |
-          rm -rf ./artifact/
-          mkdir -p ./artifact/
-          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*uefi*img*" | xargs -i mv -f {} ./artifact/
+        cd openwrt/bin/targets/*/*
+        rm -rf packages
+        echo "::set-env name=FIRMWARE::$(pwd)"
+
     - name: 上传固件
       uses: actions/upload-artifact@master
+      if: always()
       with:
-        name: OpenWrt_firmware_Lienol
-        path: ./artifact/
-
+        name: OpenWrt_firmware
+        path: ${{ env.FIRMWARE }}
