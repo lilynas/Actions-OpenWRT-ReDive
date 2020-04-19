@@ -859,9 +859,15 @@ EOF
 
 ## 增配点
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-unblockmusic=y #解锁网易云灰色歌曲
-CONFIG_PACKAGE_luci-app-unblockneteasemusic-go=y #解锁网易云灰色歌曲
+CONFIG_PACKAGE_luci-app-unblockmusic=y
+CONFIG_UnblockNeteaseMusic_Go=y
+CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
+CONFIG_PACKAGE_UnblockNeteaseMusicGo=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
+CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
+CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
+CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
+# CONFIG_PACKAGE_luci-app-smartinfo=y #磁盘健康监控
 EOF
 
 # 
