@@ -1,5 +1,5 @@
 # Actions-OpenWRT-ReDive
-![.github/workflows/D2-Lienol.yml](https://github.com/lilynas/Actions-OpenWRT-ReDive/workflows/.github/workflows/D2-Lienol.yml/badge.svg)
+![OpenWrt-D2](https://github.com/lilynas/Actions-OpenWRT-ReDive/workflows/OpenWrt-D2/badge.svg)
 
 自动编译一些路由器固件
 
