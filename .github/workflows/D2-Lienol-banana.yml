@@ -1,5 +1,4 @@
-
-name: OpenWrt-D2
+name: OpenWrt-D2-Banana
 
 on:
 # 定时触发(每天早4点)
@@ -30,7 +29,7 @@ on:
 env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: dev-19.07
-  DIY_SH: d2_lienol.sh
+  DIY_SH: d2_lienol_banana.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
@@ -101,7 +100,6 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "::set-env name=FIRMWARE::$(pwd)"
-
     - name: 上传固件
       uses: actions/upload-artifact@master
       if: always()
