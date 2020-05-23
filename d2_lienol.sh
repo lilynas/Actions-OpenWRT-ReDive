@@ -9,7 +9,7 @@ cat feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 # 添加第三方软件包
-git clone https://github.com/vernesong/OpenClash package/openclash
+git clone -b master https://github.com/vernesong/OpenClash package/openclash
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/animefansxj/luci-app-smartinfo package/luci-app-smartinfo
 # git clone https://github.com/kang-mk/luci-app-passwall package/luci-app-passwall
