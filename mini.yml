@@ -1,6 +1,7 @@
 
 #!/bin/bash
 
+## 小米 Mini 路由器
 # 更新并安装源
 cd openwrt
 # sed -i 's#lienol https://github.com/Lienol/openwrt-package#lienol https://github.com/kang-mk/openwrt-package#g' feeds.conf.default #更换默认包源
@@ -62,7 +63,7 @@ touch ./.config
 
 # 编译固件:
 
-## D2原始 .config 文件固定点
+## 原始 .config 文件固定点
 cat >> .config <<EOF
 CONFIG_TARGET_ramips=y
 CONFIG_TARGET_ramips_mt7620=y
