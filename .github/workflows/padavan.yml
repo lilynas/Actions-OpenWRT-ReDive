@@ -46,7 +46,7 @@ jobs:
         TNAME: "NEWIFI-MINI MI-MINI"
       run: |
         cwd=`pwd`
-        CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
+        CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/padavan/toolchain-mipsel
         cd padavan
         cd trunk
         for m in $TNAME;
