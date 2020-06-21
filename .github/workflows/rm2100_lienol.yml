@@ -29,7 +29,7 @@ on:
 env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: dev-19.07
-  DIY_SH: RM2100.sh
+  DIY_SH: RM2100_lienol.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
